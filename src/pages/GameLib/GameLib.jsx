@@ -5,8 +5,10 @@ import styles from './GameLib.module.css'
 import configGameLib from "../configGameLib.json"
 import { QueryClient, useQuery } from 'react-query';
 import { getGames, checkAuth } from '../../api/rest'
+import { updateUserData } from '../../store/slices/userReducer'
+import { connect } from "react-redux";
 
-const GameLib = (props) => {
+const GameLib = ({ updateUserData }) => {
     const navigate = useNavigate()
 
     const [setting, setSetting] = useState({
@@ -23,23 +25,22 @@ const GameLib = (props) => {
         if (element) element.style.backgroundColor = 'rgb(1, 148, 1)'
     }, [setting.genre])
 
-    const { data: userData, isSuccess: isUserSuccess } = useQuery({
+    useQuery({
         queryFn: () => checkAuth(setting),
         queryKey: ['user'],
-        onSuccess: (data) => {
-            console.log(data)
+        onSuccess: ({ data }) => {
+            updateUserData(data)
         },
         onError: ({ response }) => {
             navigate('/auth')
         },
-        retry:false
+        retry: false
     })
 
     const { data: dataGames, isSuccess: isGameSuccess } = useQuery({
         queryFn: () => getGames(setting),
         queryKey: ['games', setting],
     })
-    //console.log(dataGames)
 
     const changeFilter = ({ target }) => {
         setSetting({ ...setting, isFreshGamesFirst: target.value === "new" })
@@ -77,4 +78,8 @@ const GameLib = (props) => {
     )
 }
 
-export default GameLib
+const mapDispatchToProps = (dispatch) => ({
+    updateUserData: (data) => dispatch(updateUserData(data))
+})
+
+export default connect(null, mapDispatchToProps)(GameLib)
