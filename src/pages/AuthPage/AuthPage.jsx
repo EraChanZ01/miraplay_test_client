@@ -1,5 +1,6 @@
 import React, { useState, useLayoutEffect } from "react"
 import FormAuth from '../../components/FormAuth/FormAuth'
+import { loginUser, registerUser } from '../../api/rest'
 import styles from './AuthPage.module.css'
 
 const AuthPage = () => {
@@ -32,7 +33,7 @@ const AuthPage = () => {
             <FormAuth description={register ? "Зареєструйся, щоб грати на максималках у свої улюблені ігри" : 'Увійди, щоб грати на максималках у свої улюблені ігри'}
                 emailIuput={{ name: "email", label: 'ВВЕДІТЬ ВАШ EMAIL:', placeholder: "YOUREMAIL@MIRAPLAY.COM" }}
                 passInput={{ name: "password", label: 'ВВЕДІТЬ ВАШ ПАРОЛЬ:', placeholder: "ВАШ ПАРОЛЬ" }}
-                buttonName={register ? 'РЕЄСТРАЦІЯ' : 'ВХІД'} />
+                buttonName={register ? 'РЕЄСТРАЦІЯ' : 'ВХІД'} fnQuery={register ? registerUser : loginUser} />
         </div>
     )
 }

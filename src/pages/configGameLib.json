@@ -1,0 +1,48 @@
+{
+    "genres": [
+        {
+            "name": "ВСІ",
+            "value": "ALL"
+        },
+        {
+            "name": "Безкоштовені",
+            "value": "FREE"
+        },
+        {
+            "name": "МОВА",
+            "value": "MOBA"
+        },
+        {
+            "name": "ШУТЕРИ",
+            "value": "SHOOTERS"
+        },
+        {
+            "name": "ЛАУНЧЕРИ",
+            "value": "LAUNCHERS"
+        },
+        {
+            "name": "MMORPG",
+            "value": "MMORPG"
+        },
+        {
+            "name": "CТРАТЕГІЇ",
+            "value": "STRATEGY"
+        },
+        {
+            "name": "Файтинг",
+            "value": "FIGHTING"
+        },
+        {
+            "name": "ГОНКИ",
+            "value": "RACING"
+        },
+        {
+            "name": "ВИЖИВАННЯ",
+            "value": "SURVIVAL"
+        },
+        {
+            "name": "ОНЛАЙН",
+            "value": "ONLINE"
+        }
+    ]
+}

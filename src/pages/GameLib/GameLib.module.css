@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "NeueMachina-Ultrabold";
+    src:
+        url("../../fonts/NeueMachina-Ultrabold.5310e4a5401b5d25eeba.woff2") format("woff2"),
+}
+
+@font-face {
+    font-family: "NeueMachina-Bold";
+    src:
+        url("../../fonts/NeueMachina-Bold.d49ee994b16c7a8be96e.woff2") format("woff2"),
+}
+
+
+body {
+    background-color: #181818;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+    background-color: #242424;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(0, 160, 0);
+    border-radius: 5px;
+}
+
+
+.GameLib {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #181818;
+}
+
+.boxGames {
+    font-family: "NeueMachina-Bold";
+    display: grid;
+    grid-template-columns: 370px 370px 370px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin-top: 50px;
+}
+
+.title {
+    font-family: "NeueMachina-Ultrabold";
+    display: flex;
+    width: 1170px;
+    color: white;
+    justify-content: start;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.tools {
+    width: 1170px;
+    display: flex;
+}
+
+.filterBlock {
+    font-family: "NeueMachina-Bold";
+    display: flex;
+    align-items: center;
+    color: rgb(109, 109, 109);
+    width: 30%;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 143%;
+}
+
+.filterDate {
+    display: flex;
+    width: 100%;
+}
+
+.selectDate {
+    margin-left: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(211, 211, 211);
+}
+
+.buttonGroup {
+    width: 70%;
+}
+
+.genres {
+    font-family: "NeueMachina-Bold";
+    font-size: 14px;
+    padding: 0px 25px;
+    height: 44px;
+    border-radius: 10px;
+    font-weight: 800;
+    border: 1px solid #454545;
+    background-color: #242424;
+    color: white;
+    margin: 5px;
+}
+
+.btnMore {
+    height: 78px;
+    width: 370px;
+    color: white;
+    text-align: center;
+    background-color: #242424;
+    border: 1px solid #454545;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 143%;
+    border-radius: 20px;
+}
+.btnMore:hover{
+    background-color: rgb(1, 148, 1);
+}

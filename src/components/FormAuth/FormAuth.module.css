@@ -61,3 +61,8 @@
     font-weight: 600;
     color: white
 }
+
+.error{
+    color: rgb(233, 62, 62);
+    font-size: 18px;
+}

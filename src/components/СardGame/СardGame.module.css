@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "NeueMachina-Regular";
+    src:
+        url("../../fonts/NeueMachina-Regular.2dabb3622c2ec78c26ea.woff2") format("woff2"),
+}
+
+@font-face {
+    font-family: "NeueMachina-Bold";
+    src:
+        url("../../fonts/NeueMachina-Bold.d49ee994b16c7a8be96e.woff2") format("woff2"),
+}
+
+.CardGame {
+    position: relative;
+    height: 495px;
+    border: 1px solid #454545;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+}
+
+.gameImage {
+    width: 100%;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.genre {
+    font-family: "NeueMachina-Regular";
+    position: absolute;
+    color: #eeeded;
+    background-color: rgba(12, 5, 32, .25);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 5px 10px;
+    top: 22px;
+    left: 28px;
+    font-size: 14px;
+}
+
+.boxInform {
+    height: 27%;
+    color: #6b6b6b;
+    padding: 20px 40px;
+}
+
+.gameName {
+    font-family: "NeueMachina-Bold";
+    color: white;
+    font-size: 22px;
+    margin: 0px 0px 25px 0px;
+}
+
+.gameDescription {
+    font-family: "NeueMachina-Regular";
+    height: 45%;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #afafaf;
+}
